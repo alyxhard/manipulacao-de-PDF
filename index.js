@@ -20,7 +20,7 @@ async function criarPDFsParaNomes(listaNomes, templatePDF, pastaPDFs) {
         const firstPage = pages[0];
         const { width, height } = firstPage.getSize();
         const fontSize = 17;
-        const fontBytes = fs.readFileSync('fonts/Arial.ttf');
+        const fontBytes = fs.readFileSync('fonts/JetBrainsMonoNL-Regular.ttf');
         const font = await pdfDoc.embedFont(fontBytes);
         const textWidth = font.widthOfTextAtSize(nome, fontSize);
         const x = (width - textWidth) / 2 + 15;
