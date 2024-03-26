@@ -9,7 +9,7 @@
 
 4. Traga seu arquivo XLSX ou edite o disponivel na pasta. O arquivo deve se chamar ``` listaUsuarios.xlsx ``` e conter a lista com todos os usuários listados em uma coluna.
 
-5. Traga seu arquivo PDF. O arquivo deve se chamar ``` template.pdf ``` Ele será modelo. O script irá gerar uma pasta chamada "pdfs" com os respectivos PDFs listados com os nomes encontrados na tabela.
+5. Traga seu arquivo PDF. O arquivo deve se chamar ``` template.pdf ``` Ele será modelo. O script irá gerar uma pasta chamada ``` pdfs ``` com os respectivos PDFs listados com os nomes encontrados na tabela.
 
 6. Para selecionar uma fonte personalizada de sua escolha, faça o download do arquivo da fonte no formato .ttf, por exemplo, Arial.ttf, e cole-o na pasta "fonts". Em seguida, modifique o nome da fonte no código:
 ```javascript
@@ -20,7 +20,7 @@ const fontBytes = fs.readFileSync('fonts/Arial.ttf');
 
 8. Abra algum PDF e verifique se o texto com o nome do usuário está na posição desejada. Caso deseje modificar a posição, vá para o próximo passo.
 
-9. Para movimentar o texto nos eixos x e y, modifique o valor após o sinal de +:
+9. Para movimentar o texto abra o arquivo ``` index.js ``` e modifique nas linhas 26, 27  os eixos x e y, modifique o valor após o sinal de +:
 ```javascript
 const x = (width - textWidth) / 2 + 15;
 const y = height / 2 + 130; 
