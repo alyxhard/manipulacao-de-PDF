@@ -18,9 +18,9 @@ const fontBytes = fs.readFileSync('fonts/Arial.ttf');
 
 7. Para executar o script no terminal, certifique-se de estar no diretório raiz da pasta. Execute ```node index.js```.
 
-8. Abra algum PDF e verifique se o texto com o nome do usuário está na posição desejada. Caso deseje modificar a posição, vá para o próximo passo.
+8. A pasta ``` pdfs ``` é criada automaticamente. Abra algum PDF e verifique se o texto com o nome do usuário está na posição desejada. Para movimentar a posição siga o para o proximo passo.
 
-9. Para movimentar o texto abra o arquivo ``` index.js ``` e modifique os eixos x e y, modifique o valor após o sinal de +:
+9. Para movimentar a posição do texto abra o arquivo ``` index.js ``` e modifique os eixos x e y, modifique o valor após o sinal de +:
 ```javascript
 const x = (width - textWidth) / 2 + 15;
 const y = height / 2 + 130; 
