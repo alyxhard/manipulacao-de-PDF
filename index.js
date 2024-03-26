@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { PDFDocument } = require('pdf-lib');
+const { PDFDocument, rgb } = require('pdf-lib'); // Importe rgb do pdf-lib
 const XLSX = require('xlsx');
 
 // Função para ler a lista de nomes do arquivo Excel
@@ -22,6 +22,7 @@ async function criarPDFsParaNomes(listaNomes, templatePDF, pastaPDFs) {
             x: 50,
             y: 50,
             size: 30,
+            color: rgb(1, 1, 1), // Defina a cor para branco
         });
         const novoPDFBytes = await pdfDoc.save();
         fs.writeFileSync(`${pastaPDFs}/${nome}.pdf`, novoPDFBytes);
